@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+    <header>
+        <div class="header-container">
+            <div class="header">
+                <h3 class="logo">Tic <span>Tac</span> Toe</h3>
+                <button onclick="showNavLinks()" class="nav-btn" id="navBtn">🖱️
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="nav-container" id="nav-link-container">
+                <ul class="nav-links" id="nav-links">
+                    <li class="nav-link"><a href="#">Home</a></li>
+                    <li class="nav-link"><a href="https://github.com/abhishek-maurya7/TicTacToe">Github</a></li>
+                    <li class="nav-link"><a href="#">About</a></li>
+                    <li class="nav-link"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="game">
+            <div class="game-container">
+                <div class="box bl-0 bt-0"><span class="markbox"></span></div>
+                <div class="box bt-0"><span class="markbox"></span></div>
+                <div class="box bt-0 br-0"><span class="markbox"></span></div>                
+                <div class="box bl-0"><span class="markbox"></span></div>
+                <div class="box"><span class="markbox"></span></div>
+                <div class="box br-0"><span class="markbox"></span></div>
+                <div class="box bl-0 bb-0"><span class="markbox"></span></div>
+                <div class="box bb-0"><span class="markbox"></span></div>
+                <div class="box bb-0 br-0"><span class="markbox"></span></div>
+            </div>
+            <div class="board">
+                <div class="board-window">
+                    <div class="board-msg">Turn for X</div>
+                    <div class="board-btn">
+                        <button onclick="reset()" class="reset-btn">Reset</button>
+                    </div>
+                </div>
+                <div class="board-window-win">
+                    <img src="excited.gif" alt="Win Gif" class="win" />
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer">Developed with ❤️ JavaScript</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

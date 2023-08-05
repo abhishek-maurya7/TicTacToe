@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    --bg-color: #333;
+    --text-color: #fff;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --span-color: #ff0022;
+    --font-size: 20px;
+    border-radius: 0;
+
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    font-family: var(--primary-font);
+    position: relative;
+    height: 100%;
+}
+
+.header-container {
+    padding: 10px;
+    font-family: var(--primary-font);
+    border-bottom: 2px solid var(--text-color);
+    background-color: #0000006c;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo span {
+    color: var(--span-color);
+    font-family: Sofia, serif;
+}
+
+.nav-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 22px;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+.nav-link {
+    margin: 15px 0;
+    border-bottom: 3px solid var(--text-color);
+    text-transform: capitalize;
+}
+
+.nav-link:hover,
+.nav-link:active {
+    border-bottom-color: #11ff00;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.nav-container {
+    height: 0;
+    overflow: hidden;
+}
+
+.nav-container-visible {
+    height: 90vh;
+}
+
+@media screen and (min-width: 600px) {
+    .nav-btn {
+        display: none;
+    }
+
+    .header-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        height: auto;
+    }
+
+    .nav-links {
+        display: flex;
+    }
+    .nav-link  {
+        border: none;
+    }
+    .nav-link a {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 6px 6px;
+        background-color: #333333;
+        border-radius: 8px;
+    }
+
+    .nav-link:hover a {
+        border-bottom: none;
+    }
+    .nav-links .nav-link:last-child a {
+        background-color: #ff7400;
+    }
+}
+
+/* Game CSS */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh; 
+    flex-grow: 1; 
+    padding: 10px;
+}
+.game-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+}
+
+.box {
+    display: flex;
+    width:22vw;
+    height: 10vh;
+    max-width: 22vh;
+    font-size: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ffffff;
+}
+
+.bt-0 {
+    border-top: none;
+}
+.bb-0 {
+    border-bottom: none;
+}
+.bl-0 {
+    border-left: none;
+}
+.br-0 {
+    border-right: none;
+}
+
+.board {
+    width: 100%;
+}
+
+.board-window {
+    display: flex;
+    padding: 20px;
+    border-radius: 5px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #a0a1d723;
+}
+
+.board-msg {
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+.reset-btn {
+    border: none;
+    font-size: 18px;
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: #ff0728;
+}
+
+.board-window-win {
+    text-align: center;
+}
+
+.win {
+    width: 200px;
+    visibility: hidden;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #1c1919;
+    border-top: 1px solid #3d2020;
+    box-shadow: 0 0 10px #3e543c;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+
+@media screen and (min-width: 920px) {
+
+    .game {
+        flex-direction: row;
+    }
+
+    .box {
+        height: 14vh;
+    }
+    .board {
+        width: 30%;
+    }
+
+}
